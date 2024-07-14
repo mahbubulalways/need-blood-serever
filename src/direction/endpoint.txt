@@ -1,0 +1,40 @@
+* Basic server starting api
+http://localhost:5000/need-blood/api/v1
+
+1. users endpoints
+  * create user = /users/create-user
+  require data = email, name, password, image
+  * get all users = /users/all-users
+  * get single data = /users/single-user/id
+  * temporary delete =users/delete-temporary/id
+  * permanent delete =users/delete-permanent/id
+
+2. auth endpoints
+  * login =/auth/login-user
+  require data = email, password
+
+3. donors endpoints 
+  * create donors= donors/create-donor
+  require data = {
+  "userId": 5,
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "phone": "1234567890",
+  "address": "123 Main St",
+  "bloodGroup": "A+",
+  "age": "30",
+  "district": "DistrictName",
+  "upazilla": "UpazillaName",
+  "gender": "male",
+  "facebook": "facebookHandle",
+  "instagram": "instagramHandle",
+  "twitter": "twitterHandle"
+}
+ 
+  * get all donors =donors/all-donors
+  * get single donor=donors/single-donor/id
+  * get pending donors = /donors/pending-donors
+  * update donor status =donors/update-donor-status/id
+   require data = status= pending/approve/deny
+
+   
